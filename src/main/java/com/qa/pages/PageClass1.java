@@ -61,12 +61,7 @@ public class PageClass1 extends BasePage {
 		select.selectByVisibleText(value);
 		
 		driver.navigate().back();
-		try {
-			Thread.sleep(2000000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	
 	
