@@ -19,6 +19,7 @@ public class PageClass1Test extends TestBase {
 	public void selectDropDown() throws Exception
 	{
 		page.getInstance(PageClass1.class).selectOption("Option 1");
+		Assert.assertTrue(false);
 	}
 
 }
