@@ -115,15 +115,14 @@ public class TestBase {
 			extentTest.log(Status.FAIL,methodName + " Failed");
 			String exception=Arrays.toString(result.getThrowable().getStackTrace());
 			extentTest.log(Status.FAIL, "Exception : "+exception);
-			try {
-				
-				extentTest.fail("Attaching screenshot", 
-						MediaEntityBuilder.createScreenCaptureFromPath(System.getProperty("user.dir")+"/Screenshots/"+methodName+".png").build());
-			}
-	catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			/*
+			 * try {
+			 * 
+			 * extentTest.fail("Attaching screenshot",
+			 * MediaEntityBuilder.createScreenCaptureFromPath(System.getProperty("user.dir")
+			 * +"/Screenshots/"+methodName+".png").build()); } catch (IOException e) { //
+			 * TODO Auto-generated catch block e.printStackTrace(); }
+			 */
 		}
 		else if(result.getStatus()==ITestResult.SKIP) 
 		{
