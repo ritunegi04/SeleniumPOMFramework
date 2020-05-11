@@ -68,6 +68,7 @@ public class TestBase {
 		htmlreporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/report.html");
 		htmlreporter.config().setDocumentTitle("Automation Report");
 		htmlreporter.config().setReportName("UI Testing Report");
+		htmlreporter.config().setAutoCreateRelativePathMedia(true);
 		report=new ExtentReports();
 		report.attachReporter(htmlreporter);
 	}
