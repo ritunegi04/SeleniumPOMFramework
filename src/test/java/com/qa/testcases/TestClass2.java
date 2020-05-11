@@ -4,10 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
-@Test(groups= {"Sanity"})
+@Test
 public class TestClass2 extends TestBase {
 	
-	@Test(groups= {"Smoke"})
+	
 	public void check()
 	{
 		log.info("inside check method");
@@ -20,7 +20,7 @@ public class TestClass2 extends TestBase {
 		log.info("inside check method");
 		System.out.println("check1");
 	}
-	@Test()
+	
 	public void check2()
 	{
 		log.info("inside check method");

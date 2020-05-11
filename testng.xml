@@ -5,11 +5,6 @@
 <listener class-name="com.qa.util.TestListener"/>
 </listeners>
   <test  name="Test">
-  <groups>
-  <run>
-  <include name="Sanity"/>
-  </run>
-  </groups>
   <classes>
    <class name="com.qa.testcases.PageClass1Test"/>
   <class name="com.qa.testcases.TestClass2"/>

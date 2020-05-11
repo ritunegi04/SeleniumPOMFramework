@@ -52,7 +52,7 @@ public class TestBase {
 
 		}
 	
-	@BeforeSuite(groups= {"Sanity"})
+	@BeforeSuite
 	public void beforeSuite()
 	{
 		prop=new Properties();
@@ -72,11 +72,7 @@ public class TestBase {
 		report=new ExtentReports();
 		report.attachReporter(htmlreporter);
 	}
-	@BeforeSuite(groups= {"Regression"})
-	public void beforeSuite1()
-	{
-		System.out.println("hello");
-	}
+	
 	
 	@BeforeClass
 	public void setup()

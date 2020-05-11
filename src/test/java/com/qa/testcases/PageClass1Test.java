@@ -15,7 +15,7 @@ public class PageClass1Test extends TestBase {
 	 * Assert.assertEquals(successMsg,
 	 * "Congratulations! You must have the proper credentials."); }
 	 */
-	@Test(groups= {"Regression"})
+	@Test
 	public void selectDropDown() throws Exception
 	{
 		page.getInstance(PageClass1.class).selectOption("Option 1");
