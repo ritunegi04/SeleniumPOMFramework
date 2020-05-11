@@ -68,7 +68,7 @@ public class TestBase {
 		htmlreporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/report.html");
 		htmlreporter.config().setDocumentTitle("Automation Report");
 		htmlreporter.config().setReportName("UI Testing Report");
-		htmlreporter.config().setAutoCreateRelativePathMedia(true);
+		//htmlreporter.config().setAutoCreateRelativePathMedia(true);
 		report=new ExtentReports();
 		report.attachReporter(htmlreporter);
 	}
@@ -121,15 +121,23 @@ public class TestBase {
 			extentTest.log(Status.FAIL,methodName + " Failed");
 			String exception=Arrays.toString(result.getThrowable().getStackTrace());
 			extentTest.log(Status.FAIL, "Exception : "+exception);
+			try {
+				extentTest.addScreenCaptureFromPath(System.getProperty("user.dir")
+				 +"/Screenshots/"+methodName+".png", "Failure Screenshot");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			
-			  try {
-			  
-			  extentTest.fail("Attaching screenshot",
-			  MediaEntityBuilder.createScreenCaptureFromPath("/Screenshots/"+methodName+".png").build()); }
-			  catch (IOException e) {
-			  //TODO Auto-generated catch block 
-				  e.printStackTrace(); }
+			/*
+			 * try {
+			 * 
+			 * extentTest.fail("Attaching screenshot",
+			 * MediaEntityBuilder.createScreenCaptureFromPath(System.getProperty("user.dir")
+			 * +"/Screenshots/"+methodName+".png").build()); } catch (IOException e) {
+			 * //TODO Auto-generated catch block e.printStackTrace(); }
+			 */
 			 
 			/*
 			 * try { extentTest.log(Status.FAIL, "Attaching screenshot",
