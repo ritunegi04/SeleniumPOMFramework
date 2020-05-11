@@ -122,24 +122,24 @@ public class TestBase {
 			extentTest.log(Status.FAIL,methodName + " Failed");
 			String exception=Arrays.toString(result.getThrowable().getStackTrace());
 			extentTest.log(Status.FAIL, "Exception : "+exception);
-			try {
-				extentTest.addScreenCaptureFromPath("../Screenshots/"+methodName+
-						  ".png", "Failure Screenshot");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			
 			/*
-			 * try {
-			 * 
-			 * //Screenshot path should be relative to report.htm hence ../Screenshots/
-			 * extentTest.fail("Attaching screenshot",
-			 * MediaEntityBuilder.createScreenCaptureFromPath("../Screenshots/"+methodName+
-			 * ".png").build()); } catch (IOException e) { //TODO Auto-generated catch block
-			 * e.printStackTrace(); }
+			 * try { extentTest.addScreenCaptureFromPath("../Screenshots/"+methodName+
+			 * ".png", "Failure Screenshot"); } catch (IOException e) { // TODO
+			 * Auto-generated catch block e.printStackTrace(); }
 			 */
+			
+			
+			
+			  try {
+			  
+			  //Screenshot path should be relative to report.htm hence ../Screenshots/
+			  extentTest.fail("Attaching screenshot",
+			  MediaEntityBuilder.createScreenCaptureFromPath("../Screenshots/"+methodName+
+			  ".png").build()); } catch (IOException e) {
+				  //TODO Auto-generated catch block
+			   e.printStackTrace();
+			   }
+			 
 			 
 			 
 			/*
