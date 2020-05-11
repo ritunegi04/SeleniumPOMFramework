@@ -19,6 +19,8 @@ public class PageClass1Test extends TestBase {
 	public void selectDropDown() throws Exception
 	{
 		page.getInstance(PageClass1.class).selectOption("Option 1");
+		log.info("Verifying that checkbox is clicked");
+		log.info("Verifying that checkbox is clicked");
 		Assert.assertTrue(false);
 	}
 

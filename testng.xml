@@ -6,7 +6,8 @@
 </listeners>
   <test  name="Test">
   <classes>
-  <class name="com.qa.testcases.PageClass1Test"/>
+   <class name="com.qa.testcases.PageClass1Test"/>
+  <class name="com.qa.testcases.TestClass2"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

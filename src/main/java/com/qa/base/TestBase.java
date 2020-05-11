@@ -8,6 +8,9 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Properties;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -34,31 +37,33 @@ public class TestBase {
 	
 	static protected WebDriver driver;
 	static protected Properties prop;
-	ExtentHtmlReporter htmlreporter;
-	ExtentReports report;
-	ExtentTest extentTest;
+	public ExtentHtmlReporter htmlreporter;
+	public static ExtentReports report;
+	public  ExtentTest extentTest;
 	String browser;
 	public Page page;
+	public Logger log;
 	
 	public TestBase() 
 	
 		{
-			prop=new Properties();
-			try
-			{
-			FileInputStream fin=new FileInputStream(new File(System.getProperty("user.dir"))+ "/src/main/java/com/qa/resources/app.config");
-			prop.load(fin);
-			}
-			catch(IOException e)
-			{
-				e.printStackTrace();
-			}
+			
 
 		}
 	
 	@BeforeSuite
 	public void beforeSuite()
 	{
+		prop=new Properties();
+		try
+		{
+		FileInputStream fin=new FileInputStream(new File(System.getProperty("user.dir"))+ "/src/main/java/com/qa/resources/app.config");
+		prop.load(fin);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
 		htmlreporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/report.html");
 		htmlreporter.config().setDocumentTitle("Automation Report");
 		htmlreporter.config().setReportName("UI Testing Report");
@@ -69,7 +74,7 @@ public class TestBase {
 	@BeforeClass
 	public void setup()
 	{
-		browser=prop.getProperty("browser");
+		browser=System.getProperty("browser");
 		if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -82,20 +87,24 @@ public class TestBase {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("url"));
+		driver.get(System.getProperty("url"));
 		page=new BasePage(driver);
+		String path=System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\resources\\log4j.properties";
+		PropertyConfigurator.configure(path);
+		log=Logger.getLogger(getClass().getSimpleName());
 		
 	}
 	
 	@BeforeMethod
 	public void beforeMethod(Method m)
 	{
-		extentTest=report.createTest(m.getName());
+	extentTest=report.createTest(m.getName());
 	}
 	
 	@AfterMethod
 	public void afterMethod(ITestResult result)
 	{
+		//extentTest=null;
 		String methodName=result.getMethod().getMethodName();
 		if(result.getStatus()==ITestResult.SUCCESS) 
 		{
@@ -125,11 +134,13 @@ public class TestBase {
 	@AfterClass
 	public void tearDown()
 	{
+		//log=null;
 		driver.quit();
 	}
 	@AfterSuite
 	public void afterSuite()
 	{
+		//report.removeTest(extentTest);
 		report.flush();
 	}
 }
