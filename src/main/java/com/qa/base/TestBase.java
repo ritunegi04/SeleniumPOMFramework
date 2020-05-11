@@ -52,7 +52,7 @@ public class TestBase {
 
 		}
 	
-	@BeforeSuite
+	@BeforeSuite(groups= {"Sanity"})
 	public void beforeSuite()
 	{
 		prop=new Properties();
@@ -71,6 +71,11 @@ public class TestBase {
 		//htmlreporter.config().setAutoCreateRelativePathMedia(true);
 		report=new ExtentReports();
 		report.attachReporter(htmlreporter);
+	}
+	@BeforeSuite(groups= {"Regression"})
+	public void beforeSuite1()
+	{
+		System.out.println("hello");
 	}
 	
 	@BeforeClass
