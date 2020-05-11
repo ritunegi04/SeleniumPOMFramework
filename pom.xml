@@ -89,8 +89,8 @@
 				<version>2.18.1</version>
 				<configuration>
 				<systemPropertyVariables>
-				<browser>${Dbrowser}</browser>
-				<url>${Durl}</url>
+				<browser>${browser}</browser>
+				<url>${url}</url>
 				</systemPropertyVariables>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
