@@ -81,7 +81,7 @@ public class TestBase {
 		{
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			//options.addArguments("--disable-features=VizDisplayCompositor");
+			options.addArguments("--disable-features=VizDisplayCompositor");
 			//options.addArguments("--window-size=1920,1080");
 			//options.addArguments("--force-device-scale-factor=1");
 			driver=new ChromeDriver(options);
