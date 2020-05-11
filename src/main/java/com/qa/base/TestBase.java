@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -78,7 +79,9 @@ public class TestBase {
 		if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-features=VizDisplayCompositor");
+			driver=new ChromeDriver(options);
 		}
 		if(browser.equals("firefox"))
 		{
