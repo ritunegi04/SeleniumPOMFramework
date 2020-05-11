@@ -135,7 +135,10 @@ public class TestBase {
 			  //Screenshot path should be relative to report.htm hence ../Screenshots/
 			  extentTest.fail("Attaching screenshot",
 			  MediaEntityBuilder.createScreenCaptureFromPath("../Screenshots/"+methodName+
-			  ".png").build()); } catch (IOException e) {
+			  ".png").build()); 
+			  } 
+			  
+			  catch (IOException e) {
 				  //TODO Auto-generated catch block
 			   e.printStackTrace();
 			   }
