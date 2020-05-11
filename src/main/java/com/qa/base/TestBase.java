@@ -81,9 +81,10 @@ public class TestBase {
 		{
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
+			
+			//For chrome browser v73.0 and above issue to capture screenshots using jenkins
 			options.addArguments("--disable-features=VizDisplayCompositor");
-			//options.addArguments("--window-size=1920,1080");
-			//options.addArguments("--force-device-scale-factor=1");
+	
 			driver=new ChromeDriver(options);
 		}
 		if(browser.equals("firefox"))
@@ -121,14 +122,24 @@ public class TestBase {
 			extentTest.log(Status.FAIL,methodName + " Failed");
 			String exception=Arrays.toString(result.getThrowable().getStackTrace());
 			extentTest.log(Status.FAIL, "Exception : "+exception);
+			try {
+				extentTest.addScreenCaptureFromPath("../Screenshots/"+methodName+
+						  ".png", "Failure Screenshot");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			
-			  try {
-			  
-			  extentTest.fail("Attaching screenshot",
-			  MediaEntityBuilder.createScreenCaptureFromPath("../Screenshots/"+methodName+".png").build()); } catch (IOException e) {
-			  //TODO Auto-generated catch block
-				  e.printStackTrace(); }
+			/*
+			 * try {
+			 * 
+			 * //Screenshot path should be relative to report.htm hence ../Screenshots/
+			 * extentTest.fail("Attaching screenshot",
+			 * MediaEntityBuilder.createScreenCaptureFromPath("../Screenshots/"+methodName+
+			 * ".png").build()); } catch (IOException e) { //TODO Auto-generated catch block
+			 * e.printStackTrace(); }
+			 */
 			 
 			 
 			/*
