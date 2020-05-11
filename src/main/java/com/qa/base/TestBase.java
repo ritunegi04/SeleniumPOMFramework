@@ -125,8 +125,7 @@ public class TestBase {
 			  try {
 			  
 			  extentTest.fail("Attaching screenshot",
-			  MediaEntityBuilder.createScreenCaptureFromPath(System.getProperty("user.dir")
-			  +"/Screenshots/"+methodName+".png").build()); }
+			  MediaEntityBuilder.createScreenCaptureFromPath("Screenshots/"+methodName+".png").build()); }
 			  catch (IOException e) {
 			  //TODO Auto-generated catch block 
 				  e.printStackTrace(); }
