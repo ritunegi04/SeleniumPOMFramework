@@ -5,6 +5,10 @@
     <classes>
       <class name="com.qa.testcases.PageClass1Test">
         <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="selectDropDown"/>

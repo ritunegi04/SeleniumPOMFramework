@@ -1,0 +1,63 @@
+2020-05-09 20:42:09 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 20:42:09 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 20:49:40 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 20:49:40 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 20:53:39 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 20:53:39 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 20:58:33 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 20:58:33 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:03:09 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:03:09 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:08:25 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:08:25 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:13:29 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:13:29 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:23:19 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:23:19 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:25:46 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:25:46 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:29:34 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:29:34 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:33:31 INFO  TestClass2:13 - inside check method
+2020-05-09 21:34:38 INFO  TestClass2:13 - inside check method
+2020-05-09 21:34:38 INFO  TestClass2:20 - inside check method
+2020-05-09 21:34:38 INFO  TestClass2:26 - inside check method
+2020-05-09 21:39:01 INFO  TestClass2:13 - inside check method
+2020-05-09 21:39:01 INFO  TestClass2:20 - inside check method
+2020-05-09 21:39:01 INFO  TestClass2:26 - inside check method
+2020-05-09 21:40:24 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:40:24 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:43:49 INFO  TestClass2:13 - inside check method
+2020-05-09 21:47:14 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:47:14 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 21:53:26 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 21:53:26 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 22:50:00 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 22:50:00 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 22:57:35 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 22:57:35 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 22:59:31 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-09 22:59:31 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-09 22:59:47 INFO  TestClass2:13 - inside check method
+2020-05-09 22:59:47 INFO  TestClass2:20 - inside check method
+2020-05-09 22:59:47 INFO  TestClass2:26 - inside check method
+2020-05-11 18:08:18 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-11 18:08:18 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-11 18:08:28 INFO  TestClass2:13 - inside check method
+2020-05-11 18:08:28 INFO  TestClass2:20 - inside check method
+2020-05-11 18:08:28 INFO  TestClass2:26 - inside check method
+2020-05-11 18:22:04 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-11 18:22:04 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-11 18:22:14 INFO  TestClass2:13 - inside check method
+2020-05-11 18:22:14 INFO  TestClass2:20 - inside check method
+2020-05-11 18:22:14 INFO  TestClass2:26 - inside check method
+2020-05-11 18:25:47 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-11 18:25:47 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-11 18:25:56 INFO  TestClass2:13 - inside check method
+2020-05-11 18:25:56 INFO  TestClass2:20 - inside check method
+2020-05-11 18:25:56 INFO  TestClass2:26 - inside check method
+2020-05-11 18:31:41 INFO  PageClass1Test:22 - Verifying that checkbox is clicked
+2020-05-11 18:31:41 INFO  PageClass1Test:23 - Verifying that checkbox is clicked
+2020-05-11 18:31:51 INFO  TestClass2:13 - inside check method
+2020-05-11 18:31:51 INFO  TestClass2:20 - inside check method
+2020-05-11 18:31:51 INFO  TestClass2:26 - inside check method
